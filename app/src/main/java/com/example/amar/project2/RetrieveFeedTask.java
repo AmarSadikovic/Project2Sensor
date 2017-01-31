@@ -53,7 +53,6 @@ public class RetrieveFeedTask {
         }
     }
 
-
    public void retrieveFinish(String output) {
 //        processJSON(output);
     }
