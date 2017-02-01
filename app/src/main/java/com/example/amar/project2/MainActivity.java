@@ -75,7 +75,7 @@ public class MainActivity extends Activity implements SensorEventListener {
 
 //        mLocalPressureValue.setText("Local pressure from the service is: "+Float.toString(local_pressure));
 //        float altitude = SensorManager.getAltitude(SensorManager.PRESSURE_STANDARD_ATMOSPHERE, pressure);
-        Toast.makeText(this, "Sensor unRegistered", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this, "Sensor unRegistered", Toast.LENGTH_SHORT).show();
 
     }
 
