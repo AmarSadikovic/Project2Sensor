@@ -12,7 +12,8 @@ import java.net.URL;
  */
 
 public class RetrieveFeedTask {
-    String mKey, mUrl;
+    private String mKey, mUrl;
+
 
     public RetrieveFinished delegate = null;
 
@@ -29,7 +30,7 @@ public class RetrieveFeedTask {
 
     protected String doInBackground() {
         mKey = "4e868b7574c8bbc38d548d30ab186370\n";
-        mUrl = "api.openweathermap.org/data/2.5/weather?q={city name}";
+        mUrl = "http://api.openweathermap.org/data/2.5/weather?id=2692969&appid=4e868b7574c8bbc38d548d30ab186370";
 
         try {
             URL url = new URL(mUrl);

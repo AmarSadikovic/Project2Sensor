@@ -21,6 +21,8 @@ public class MainActivity extends Activity implements SensorEventListener {
     private Sensor mPressureSensor;
     private FragmentManager fm;
     private FrontFragment frontFragment;
+    private ATFrag atFragment;
+    private VolleyFrag volleyFrag;
     private boolean isTemperaturePresent = false, isPressurePresent = false, isHumiditySensorPresent = false;
 
 
@@ -30,6 +32,8 @@ public class MainActivity extends Activity implements SensorEventListener {
         setContentView(R.layout.activity_main);
         fm = getFragmentManager();
         frontFragment = new FrontFragment();
+        atFragment = new ATFrag();
+        volleyFrag = new VolleyFrag();
         mSensorManager = (SensorManager) this.getSystemService(Context.SENSOR_SERVICE);
 
 //        mTemperatureValue = (TextView) findViewById(R.id.mTemperatureValue);
@@ -39,7 +43,7 @@ public class MainActivity extends Activity implements SensorEventListener {
 //        mDewPointValue = (TextView) findViewById(R.id.mDewPointValue);
 
         initiateSensors();
-        setFragment(frontFragment, false);
+        setFragment(volleyFrag, false);
         registerListener();
 
     }
@@ -71,7 +75,7 @@ public class MainActivity extends Activity implements SensorEventListener {
 
 //        mLocalPressureValue.setText("Local pressure from the service is: "+Float.toString(local_pressure));
 //        float altitude = SensorManager.getAltitude(SensorManager.PRESSURE_STANDARD_ATMOSPHERE, pressure);
-
+        Toast.makeText(this, "Sensor unRegistered", Toast.LENGTH_SHORT).show();
 
     }
 
